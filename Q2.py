@@ -6,7 +6,7 @@ total = 0
 list1 = [1,2,-8,5.5]
 
     for x in list1:
-        sum_numbers += x
+        total += x
 
 
 print(total)
