@@ -19,7 +19,7 @@ l= driver.find_element_by_xpath("//input[@id='txtSearchText']")
 l.send_keys("Tutorialspoint")
 #get_attribute() to get value of input box
 print("Enter text is: " + l.get_attribute('value'))
-#find the name started with title New User Register
+#find the name associated with title New User Register
 s = driver.find_element_by_css_selector("a[title*='New User Register']").text
 print("The text is: " + s)
 
