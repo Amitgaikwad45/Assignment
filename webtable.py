@@ -1,23 +1,38 @@
+# Python program to scrape table from website
+
+# import libraries selenium and time
 from selenium import webdriver
-import time
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-driver=webdriver.Chrome(executable_path='../drivers/chromedriver.exe')
+from time import sleep
 
-driver.get("file:///E:/demo.html")
-#driver.maximize_window()
-#rows=driver.find_element_by_xpath("/html/body/table/tbody/tr")#count number of rows
-rw=driver.find_elements(By.TAG_NAME,"tr")
-cols=driver.find_elements(By.TAG_NAME,"th")
-t=len(rw)
+# Create webdriver object
+driver=webdriver.Chrome(executable_path='F:/chromedriver.exe')
 
-x=int(t)+1
-p=len(cols)
-y=int(p)+1
-print(len(cols))
-print(len(rw))
-for i in range(2,x):
-    for j in range(1,y):
-            val=driver.find_element_by_xpath("/html/body/table/tbody/tr[i]/td["+str(j)+"]").text
-            print(val)
-        print()
+# Get the website
+driver.get(
+    "https://www.geeksforgeeks.org/find_element_by_link_text-driver-method-selenium-python/")
+
+# Make Python sleep for some time
+sleep(2)
+
+# Obtain the number of rows in body
+rows = 1 + len(driver.find_elements_by_xpath(
+    "/html/body/div[3]/div[2]/div/div[1]/div/div/div/article/div[3]/div/table/tbody/tr"))
+
+# Obtain the number of columns in table
+cols = len(driver.find_elements_by_xpath(
+    "/html/body/div[3]/div[2]/div/div[1]/div/div/div/article/div[3]/div/table/tbody/tr[1]/td"))
+
+# Print rows and columns
+print(rows)
+print(cols)
+
+#change of for loop
+# Printing the data of the table
+for r in range(2, rows + 1):
+    for p in range(1, cols + 1):
+        # obtaining the text from each column of the table
+        value = driver.find_element_by_xpath(
+            "/html/body/div[3]/div[2]/div/div[1]/div/div/div/article/div[3]/div/table/tbody/tr[" + str(
+                r) + "]/td[" + str(p) + "]").text
+        print(value, end='	 ')
+    print()
