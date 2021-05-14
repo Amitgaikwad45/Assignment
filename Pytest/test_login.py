@@ -13,3 +13,7 @@ def test_loginbyMail(setup):
 
 def test_loginbyFacebook(setup):
     print("facebook login")
+    
+    
+#to run specific method from file test_login.py 
+#run the command pytest -v -s test_login::test_loginbyFacebook
