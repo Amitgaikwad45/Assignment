@@ -1,5 +1,6 @@
 #datadriven testing
 import XUtils
+import time
 from  selenium import  webdriver
 from selenium.webdriver.common.by import By
 driver = webdriver.Chrome(executable_path='F:/chromedriver.exe')
@@ -17,17 +18,19 @@ for r in range(2,rows+1):
 
     driver.find_element_by_id("txtUsername").send_keys(username)
     driver.find_element_by_id("txtPassword").send_keys(password)
-   # ele=driver.find_element_by_xpath("//div[@id='logInPanelHeading']")
     driver.find_element_by_id("btnLogin").click()
 
-    if driver.title=='OrangeHRM' :
+    if driver.current_url=='https://opensource-demo.orangehrmlive.com/index.php/dashboard' :
         print("test passed")
         XUtils.writeData(path,"Sheet1",r,3,"test passed")
+        driver.find_element_by_id("welcome").click()
+        time.sleep(2)
+        driver.find_element_by_xpath("//*[@id='welcome-menu']/ul/li[3]/a").click()
     else:
         print("test failed")
         XUtils.writeData(path,"Sheet1",r,3,"test failed")
 
     #go back to login page for next iteration
-    driver.find_element_by_id("welcome").click()
-    el=driver.find_element_by_link_text("Logout")
-    el.click()
+
+
+driver.close()
