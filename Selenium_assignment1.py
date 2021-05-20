@@ -13,8 +13,6 @@ driver.maximize_window()
 rows = 1 + len(driver.find_elements_by_xpath(
     "/html/body/div[6]/div[2]/section/div/section/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[11]"))
 
-#cols = len(driver.find_elements_by_xpath(
-#    "/html/body/div[6]/div[2]/section/div/section/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[11]/td"))
 f_id1=driver.find_element_by_xpath("//html/body/div[6]/div[2]/section/div/section/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[12]/td[2]/a").text
 f_city1=driver.find_element_by_xpath("//*[@id='cnt-data-content']/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[12]/td[3]/div[1]/span").text
 f_stat1=driver.find_element_by_xpath("//*[@id='cnt-data-content']/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[12]/td[7]/span").text
@@ -41,13 +39,12 @@ for k in d1:
     
     
 print(rows)
-#print(cols)
+
 
 # Printing the data of the table
-#for r in range(1, rows + 1):
-   # for p in range(1, cols + 1):
-        # obtaining the text from each column of the table
-     #   value = driver.find_element_by_xpath(
-      #      "/html/body/div[6]/div[2]/section/div/section/div/div[2]/div/aside[1]/div[1]/table/tbody/tr[r]/td[p]").text
-       # print(value, end='       ')
-    #print()
+for r in range(11, 19):
+    # obtaining the text from each column of the table
+    value = driver.find_element_by_xpath("//*[@id='cnt-data-content']/div/div[2]/div/aside[1]/div[1]/table/tbody/tr["+str(r)+"]/td[3]/div[1]/span").text
+    val1= driver.find_element_by_xpath("//*[@id='cnt-data-content']/div/div[2]/div/aside[1]/div[1]/table/tbody/tr["+str(r)+"]/td[7]/span").text
+    val2=driver.find_element_by_xpath("//*[@id='cnt-data-content']/div/div[2]/div/aside[1]/div[1]/table/tbody/tr["+str(r)+"]/td[1]").text
+    print(value,val1,val2)
