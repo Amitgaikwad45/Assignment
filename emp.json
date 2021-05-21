@@ -1,0 +1,27 @@
+{
+    "firstname": "John",
+    "lastname": "keneedy",
+
+    "address": [
+    {       "street":   "abc",
+            "city":     "pune",
+            "state":    "MH"
+    },
+
+      {
+            "street": "kts",
+            "city": "mumbai",
+            "state": "MH"
+
+
+
+      }
+
+
+
+
+
+
+
+]
+}
