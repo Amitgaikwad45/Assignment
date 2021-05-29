@@ -12,9 +12,9 @@ LoginTest
     Open my browser    ${url}   ${browser}
     click signin button
     Switch tab
-    Enter email                 amit.gaikwad@afourtech.com
+    Enter email                 xyz@example.com
     #Switch tab
-    Enter password              Amitgaikwad@123
+    Enter password              John@123
 
 
 Fetch user
