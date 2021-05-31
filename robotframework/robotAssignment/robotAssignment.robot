@@ -23,10 +23,17 @@ Fetch user
 Fetch Options
     Fetch all options
 
-Raise ticketoption
-    Enter Raiseticket
-
 Tms Section
     Enter Tms section
+
+Title
+    Enter title         raise ticket
+
+
+Description
+    Enter description    software
+
+Raise ticketoption
+    Enter Raiseticket
 #LogoutTest
  #   Enter logout btn
