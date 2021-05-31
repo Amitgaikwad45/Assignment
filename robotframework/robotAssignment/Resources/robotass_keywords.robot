@@ -86,11 +86,35 @@ Enter Tms section
     click element    ${Tms}
     ${sw_window}=   get window handles
     switch window    ${sw_window}[1]
+    sleep    5 seconds
+    #click element    ${history}
 
-    click element    ${history}
+
+
+
 
 Enter Raiseticket
-    click element    ${raise_tkt}
+
+    sleep    3 seconds
+    click element    ${select_arrow}
+    select from list by label   xpath://*[@id="mat-option-0" ]/span     Request
+   # sleep    3 seconds
+    #select from list by index
+
+Enter title
+    [Arguments]    ${title}
+
+    #locator refering from locators file issue title
+    input text    ${txt_title}      ${title}
+
+
+Enter description
+    #issue description
+    [Arguments]    ${des}
+    input text    ${txt_des}        ${des}
+
+
+
 
 Enter logout btn
     sleep    3 seconds
