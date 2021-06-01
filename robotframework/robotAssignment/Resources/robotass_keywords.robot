@@ -114,6 +114,10 @@ Enter description
     input text    ${txt_des}        ${des}
 
 
+Enter History
+    click element      ${sec_history}
+    log to console      ${sec_his}
+
 
 
 Enter logout btn
