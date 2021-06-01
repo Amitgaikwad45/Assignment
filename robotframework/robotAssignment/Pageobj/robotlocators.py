@@ -26,6 +26,9 @@ raise_tkt="xpath:/html/body/app-root/app-navbar/mat-sidenav-container/mat-sidena
 history="xpath:/html/body/app-root/app-navbar/mat-sidenav-container/mat-sidenav/mat-nav-list/a[2]/div/span"
 
 
+#History section
+sec_history="xpath:/html/body/app-root/app-navbar/mat-sidenav-container/mat-sidenav/mat-nav-list/a[2]/div/span"
+sec_his="no history"
 
 
 
