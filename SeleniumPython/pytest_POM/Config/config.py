@@ -4,3 +4,4 @@ class TestData:
     USER_NAME="Admin"
     PASSWORD="admin123"
     LOGIN_PAGE_TITLE="OrangeHRM"
+    HOME_PAGE_HEADER="Dashboard"
