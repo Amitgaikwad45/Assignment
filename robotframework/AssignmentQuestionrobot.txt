@@ -1,8 +1,0 @@
-Robot Assignment Question-
-1)Login to ERP portal
-2)Fetch Username of login user
-3)Fetch all options on the erp portal
-4)Enter Tms section
-5)Raise ticket 
-6)click history option retrieve result 
-7)Logout from the ERP portal
