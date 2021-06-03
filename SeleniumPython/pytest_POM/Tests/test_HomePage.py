@@ -8,8 +8,8 @@ class Test_Home(BaseTest):
     def test_home_page_title(self):
         self.loginPage=LoginPage(self.driver)
         homePage=self.loginPage.do_login(TestData.USER_NAME,TestData.PASSWORD)
-        title=homePage.get_home_page_title(TestData.LOGIN_PAGE_TITLE)
-        assert  title == TestData.LOGIN_PAGE_TITLE
+        title=homePage.get_home_page_title(TestData.HOME_PAGE_TITLE)
+        assert  title == TestData.HOME_PAGE_TITLE
 
     def test_home_page_header(self):
         self.loginPage = LoginPage(self.driver)
