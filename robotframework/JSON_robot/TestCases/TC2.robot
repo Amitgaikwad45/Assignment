@@ -7,6 +7,8 @@ Library    Collections
 test timeout    .1s
 #force tag applicable to all the testcases
 Force Tags    Hello
+#this tag applicable to the testcases which have no tag
+Default Tags    Hello
 
 
 
