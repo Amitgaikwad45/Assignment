@@ -17,16 +17,19 @@ class LoginPage(BasePage):
 
     """Page Actions for login page"""
 
-    """This is used to get the page title"""
+    
     def get_login_page_title(self,title):
+        #This is used to get the page title
         return self.get_title(title)
 
-    """This is used to check the signup link"""
+    
     def is_signup_link_exist(self):
+        #This is used to check the signup link
         return self.is_visible(self.SIGNUP_LINK)
 
-    """This is used to login the app"""
+    
     def do_login(self,username,password):
+        #This is used to login into the page
         self.do_send_keys(self.EMAIL,username)
         self.do_send_keys(self.PASSWORD,password)
         self.do_click(self.LOGIN_BUTTON)
