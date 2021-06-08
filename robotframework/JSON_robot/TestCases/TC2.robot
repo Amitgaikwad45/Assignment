@@ -3,6 +3,12 @@ Library    ../PageObjects/locators.py
 Library    SeleniumLibrary
 Library    Collections
 
+#testcases in the following suite will executed within 0.1s
+test timeout    .1s
+#force tag applicable to all the testcases
+Force Tags    Hello
+
+
 
 *** Variables ***
 ${browser}  chrome
