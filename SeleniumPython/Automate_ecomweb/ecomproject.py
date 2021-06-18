@@ -126,7 +126,7 @@ time.sleep(2)
 
 #final price
 price=driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/table/tbody/tr[4]/td[2]')
-print(price.text)
+print("final price of all the products"+price.text)
 
 #continue shopping
 continue_shop=driver.find_element_by_xpath('//a[text()="Continue Shopping"]')
